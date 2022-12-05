@@ -6,13 +6,14 @@ class bubbleSort
 	{
 		System.out.println("Sorted Elements are...");
 
-		for(int i=0;i<arr.length;i++)       // time complexity of
+		for(int i=0;i<arr.length;i++)
 		{
 			System.out.print(arr[i] +" ");     // output of arrays....
 		}
 
 		System.out.println();
 	}
+
 
 	public static void main(String[]args)
 	{
@@ -27,8 +28,9 @@ class bubbleSort
 			arr[i]=in.nextInt();
 		}
 
+// Bubble Sort . . .                  time complexity = O(n^2)
 
-		for(int i=0;i<arr.length-1;i++)          //outer loop
+		for(int i=0;i<arr.length;i++)          //outer loop
 		{
 			for(int j=0;j<arr.length-1-i;j++)     //inner loop
 			{
