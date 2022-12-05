@@ -1,12 +1,12 @@
 import java.util.*;
 class SelectionSort
 {
-	public static void SortNo(int arr[])
+	public static void SortNo(int arr[])              //function declaration
 	{
 		System.out.println("Sorted Elements are");
 
 		for(int i=0 ; i<arr.length ; i++)
-		{
+		{                                          //output of sorted array
 			System.out.print(arr[i] + "  ");
 		}
 
@@ -21,19 +21,22 @@ class SelectionSort
 		System.out.println("Enter the size of array..");
 		int size=in.nextInt();
 		System.out.println("Enter numbers into array..");
-		int arr[]=new int[size];
+		int arr[]=new int[size];                          // array declaration
 
 		for(int i=0;i<arr.length;i++)
 		{
-			arr[i]=in.nextInt();
+			arr[i]=in.nextInt();                 //array input
 		}
 
 
-		for(int i=0;i<arr.length;i++)
+
+//Selection Sort . . . .      Time Complexity = O(n^2)
+
+		for(int i=0;i<arr.length;i++)             //outer loop
 		{
 			int smallest = a[i];
 
-			for(int j=i+1;j<arr.length;j++)
+			for(int j=i+1;j<arr.length;j++)       //inner loop
 			{
 				if(arr[smallest]>arr[j])
 				{
@@ -41,12 +44,12 @@ class SelectionSort
 				}
 			}
 
-			int temp = arr[smallest];
+			int temp = arr[smallest];       //number swapping . . .
 			arr[smallest]=arr[i];
 			arr[i]=temp;
 
 		}
 
-		SortNo(arr);
+		SortNo(arr);                   //function calling . .
 	}
 }
